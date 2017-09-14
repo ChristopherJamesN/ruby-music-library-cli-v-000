@@ -36,20 +36,20 @@ class MusicLibraryController
   def list_songs
     #There is something wrong with the way that I am accessing the second level information (song artist and genre for example)
     #Song.all.sort_by!{|song| song.name}
-    Song.all.sort_by!{|song| song.name}.each_with_index do |song, index|
+    Song.all.sort_by{|song| song.name}.each_with_index do |song, index|
       puts "#{index+1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
     end
   end
 
   def list_artists
-    alpha_artists = Artist.all.sort_by!{|artist| artist.name}
+    alpha_artists = Artist.all.sort_by{|artist| artist.name}
     alpha_artists.each_with_index do |artist, index|
       puts "#{index+1}. #{artist.name}"
     end
   end
 
   def list_genres
-    alpha_genres = Genre.all.sort_by!{|genre| genre.name}
+    alpha_genres = Genre.all.sort_by{|genre| genre.name}
     alpha_genres.each_with_index do |genre, index|
       puts "#{index+1}. #{genre.name}"
     end
