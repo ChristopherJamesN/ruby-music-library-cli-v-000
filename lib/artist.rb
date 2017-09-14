@@ -53,7 +53,7 @@ class Artist
   end
 
   def self.create(name)
-    Artist.new(name).save[0]
+    Artist.new(name).save
   end
 
   def genres
