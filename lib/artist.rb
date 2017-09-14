@@ -1,7 +1,6 @@
 class Artist
 
   attr_accessor :name
-  @@song_count=0
   @@all = []
 
 
@@ -23,7 +22,6 @@ class Artist
   def add_song(song)
     if @songs.include?(song) == false
       @songs << song
-      @@song_count += 1
     end
     if song.artist == nil
       song.artist=self
