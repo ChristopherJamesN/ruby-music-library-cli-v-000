@@ -27,12 +27,13 @@ class Genre
   end
 
   def artists
+    artists_array
     self.songs.each do |song|
-      if @artists.include?(song.artist) == false
-        @artists.push(song.artist)
+      if artists_array.include?(song.artist) == false
+        artists_array.push(song.artist)
       end
     end
-    @artists
+    artists_array
   end
 
   def self.all
