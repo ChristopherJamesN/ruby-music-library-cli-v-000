@@ -42,7 +42,7 @@ class Genre
   end
 
   def self.create(name)
-    Genre.new(name).save[1]
+    Genre.new(name).save[0]
   end
 
 end
