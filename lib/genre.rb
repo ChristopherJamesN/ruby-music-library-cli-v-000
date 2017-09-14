@@ -44,6 +44,7 @@ class Genre
   def self.create(name)
     new_genre = Genre.new(name)
     new_genre.save[0]
+    new_genre
   end
 
 end
