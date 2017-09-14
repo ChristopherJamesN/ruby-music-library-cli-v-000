@@ -1,12 +1,13 @@
 class Genre
   attr_accessor :name
   @@all=[]
-  @songs = []
+
 
   extend Concerns::Findable
 
   def initialize(name)
     @name = name
+    @songs = []
   end
 
   def songs
