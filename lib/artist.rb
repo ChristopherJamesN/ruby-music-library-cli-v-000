@@ -9,6 +9,7 @@ class Artist
   def initialize(name)
     @name = name
     @songs = []
+    @genres = []
   end
 
   def name
@@ -57,13 +58,12 @@ class Artist
   end
 
   def genres
-    genre_array = []
     self.songs.each do |song|
-      if genre_array.include?(song.genre) == false
-        genre_array.push(song.genre)
+      if @genres.include?(song.genre) == false
+        @genres.push(song.genre)
       end
     end
-    genre_array
+    @genres
   end
 
 end
